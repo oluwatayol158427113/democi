@@ -2,18 +2,18 @@
 
 namespace App\Controllers;
 
+use App\Models\ArticlesModel;
+
 class Articles extends BaseController
 {
   public function index()
   {
 
-    $db = db_connect();
-    $db->listTables();
+    $model = new ArticlesModel;
 
-    $data = [
-      ['title' => 'First Article', 'content' => 'Content of the first article.'],
-      ['title' => 'Second Article', 'content' => 'Content of the second article.']
-    ];
+    $data = $model->findAll();
+
+    dd($data);
     
     return view('Articles/index', [
       'articles' => $data
