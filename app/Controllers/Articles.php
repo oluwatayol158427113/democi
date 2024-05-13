@@ -13,7 +13,7 @@ class Articles extends BaseController
 
     $data = $model->findAll();
 
-    dd($data);
+    // dd($data);
     
     return view('Articles/index', [
       'articles' => $data
