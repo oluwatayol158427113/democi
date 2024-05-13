@@ -38,6 +38,10 @@ class Articles extends BaseController
 
   public function create()
   {
-    dd($this->request->getPost());
+    $model = new ArticlesModel;
+
+    $model->insert($this->request->getPost());
+
+    dd($model->getInsertID());
   }
 }
