@@ -5,6 +5,8 @@
 <?= $this->section('content') ?>
   <h1>Articles Page</h1>
 
+  <a href="<?= url_to('Articles::new') ?>">New</a>
+
   <?php foreach ($articles as $article): ?>
     <article>
       <h2><a href="<?= site_url('/articles/' . $article['id']) ?>"><?= $article['title'] ?></a></h2>

@@ -30,4 +30,9 @@ class Articles extends BaseController
       'article' => $article
     ]);
   }
+
+  public function new()
+  {
+    return view('Articles/new');
+  }
 }
