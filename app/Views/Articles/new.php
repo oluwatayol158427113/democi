@@ -15,10 +15,10 @@
 
   <?= form_open('articles/create') ?>
     <label for="title">Title</label>
-    <input type="text" name="title" id="title">
+    <input type="text" name="title" id="title" value="<?= old('title') ?>">
 
     <label for="content">Content</label>
-    <textarea name="content" id="content"></textarea>
+    <textarea name="content" id="content"><?= old('content') ?></textarea>
 
     <button>Save</button>
   <?= form_close() ?>
