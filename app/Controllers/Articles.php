@@ -49,6 +49,7 @@ class Articles extends BaseController
                         ->withInput();
     }
 
-    dd($id);
+    return redirect()->to("articles/$id")
+                        ->with('message', 'Successfully saved new article.');
   }
 }
