@@ -52,4 +52,15 @@ class Articles extends BaseController
     return redirect()->to("articles/$id")
                         ->with('message', 'Successfully saved new article.');
   }
+
+  public function edit($id)
+  {
+    $model = new ArticlesModel;
+
+    $article = $model->find($id);
+
+    return view('Articles/edit', [
+      'article' => $article
+    ]);
+  }
 }
