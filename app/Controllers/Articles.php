@@ -33,7 +33,12 @@ class Articles extends BaseController
 
   public function new()
   {
-    return view('Articles/new');
+    return view('Articles/new', [
+      'article' => [
+        'title' => '',
+        'content' => ''
+      ]
+    ]);
   }
 
   public function create()

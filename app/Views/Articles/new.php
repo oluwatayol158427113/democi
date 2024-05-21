@@ -14,12 +14,6 @@
   <?php endif ?>
 
   <?= form_open('articles/create') ?>
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" value="<?= old('title') ?>">
-
-    <label for="content">Content</label>
-    <textarea name="content" id="content"><?= old('content') ?></textarea>
-
-    <button>Save</button>
+    <?= $this->include('Articles/form') ?>
   <?= form_close() ?>
 <?= $this->endSection() ?>
