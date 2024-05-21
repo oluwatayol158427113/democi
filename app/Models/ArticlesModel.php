@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use App\Entities\Article;
 
 class ArticlesModel extends Model {
   protected $table = 'Articles';
@@ -20,4 +21,5 @@ class ArticlesModel extends Model {
       'Content is required.'
     ]
   ];
+  protected $returnType = \App\Entities\Article::class;
 }
