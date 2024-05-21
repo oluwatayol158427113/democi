@@ -63,4 +63,18 @@ class Articles extends BaseController
       'article' => $article
     ]);
   }
+
+  public function update($id)
+  {
+    $model = new ArticlesModel;
+
+    if(!$model->update($id, $this->request->getPost()))
+    {
+      return redirect()->back()
+                        ->with('errors', $model->errors());
+    }
+
+    return redirect()->to("articles/$id")
+                        ->with('message', 'Article updated.');
+  }
 }
