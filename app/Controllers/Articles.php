@@ -91,6 +91,15 @@ class Articles extends BaseController
                         ->with('message', 'Article updated.');
   }
 
+  public function delete($id)
+  {
+    $article = $this->getArticleOrError($id);
+
+    return view('Articles/delete', [
+      'article' => $article
+    ]);
+  }
+
   private function getArticleOrError($id): Article
   {
     $article = $this->model->find($id);
