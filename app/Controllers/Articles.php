@@ -43,7 +43,9 @@ class Articles extends BaseController
   {
     $model = new ArticlesModel;
 
-    $id = $model->insert($this->request->getPost());
+    $article = new Article($this->request->getPost());
+
+    $id = $model->insert($article);
 
     if (!$id) {
 
