@@ -6,7 +6,7 @@ use CodeIgniter\Config\BaseConfig;
 
 class Email extends BaseConfig
 {
-    public string $fromEmail  = 'noreply@samplelang.localhost';
+    public string $fromEmail  = 'noreply@example.com';
     public string $fromName   = 'Samplelang App';
     public string $recipients = '';
 
